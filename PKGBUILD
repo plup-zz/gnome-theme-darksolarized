@@ -1,14 +1,15 @@
-# Maintainer: Your Name <youremail@domain.com>
+# Maintainer: Neil Perry <nperry@gmail.com>
 pkgname=gnome-theme-darksolarized-git
 pkgver=20120206
 pkgrel=1
 pkgdesc="DarkSolarized Theme"
+url=('https://github.com/NPerry/gnome-theme-darksolarized')
 arch=('any')
 license=('GPL')
 depends=('gtk-engine-murrine' )
 makedepends=('git')
 source=()
-md5sums=() #generate with 'makepkg -g'
+md5sums=()
 
 _gitroot=git://github.com/NPerry/gnome-theme-darksolarized.git
 _gitname=gnome-theme-darksolarized

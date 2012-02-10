@@ -224,12 +224,16 @@ style "panelbuttons"
     fg[PRELIGHT]	= @selected_fg_color
 }
 
+# Google Chrome/Chromium theming (requires 9.0.597 or newer)
 style "chrome-gtk-frame"
 {
-    ChromeGtkFrame::frame-color = @bg_color
-    ChromeGtkFrame::inactive-frame-color = darker(@bg_color)
-
+    ChromeGtkFrame::frame-color = shade (0.5, @bg_color)
+    ChromeGtkFrame::inactive-frame-color = shade (0.5, @bg_color)
+    ChromeGtkFrame::frame-gradient-size = 100
+    ChromeGtkFrame::frame-gradient-color = shade (1.08,@bg_color)
+    ChromeGtkFrame::inactive-frame-gradient-color = shade (1.08,@bg_color)
 }
+class "ChromeGtkFrame" style "chrome-gtk-frame"
 
 class "ChromeGtkFrame" style "chrome-gtk-frame"
 

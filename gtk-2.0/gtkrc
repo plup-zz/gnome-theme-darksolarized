@@ -1,6 +1,7 @@
 # Solarizetheme, based on Murrina333
 
-gtk_color_scheme = "fg_color:#fdf6e3\nbg_color:#002b36\nbase_color:#073642\ntext_color:#fdf6e3\nselected_bg_color:#586e75\nselected_fg_color:#fdf6e3"
+gtk_color_scheme = "fg_color:#fdf6e3\nbg_color:#002b36\nbase_color:#073642\ntext_color:#fdf6e3\nselected_bg_color:#586e75\nselected_fg_color:#fdf6e3\ninfo_bg_color:#b58900\nwarning_bg_color:#cb4b16\nquestion_bg_color:#268bd2\nerror_bg_color:#dc322f\nother_bg_color:#6c71c4\n"
+
 
 gtk-button-images = 1
 gtk-icon-sizes = "panel-menu=16,16:panel=16,16:gtk-button=16,16:gtk-large-toolbar=16,16"

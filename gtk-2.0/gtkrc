@@ -51,23 +51,15 @@ style "theme-default"
   text[SELECTED]   	=  darker (@selected_fg_color)
   text[INSENSITIVE]	=  @fg_color
 
-  engine "murrine" 
-  {
-	menuitemstyle	 	= 2
-	scrollbarstyle	 	= 0
-	contrast		 	= 1.0
-	menustyle 		 	= 0
-	glazestyle 		 	= 0
-	menubarstyle 	 	= 0
-	menubaritemstyle 	= 0
-	menuitemstyle 	 	= 0
-	listviewheaderstyle = 0
-	listviewstyle 		= 1
-	roundness 			= 0
-        animation 			= TRUE
-  }
+    engine "xfce"
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
 }
-
 
 style "theme-wide" = "theme-default"
 {
@@ -95,7 +87,19 @@ style "theme-button" = "theme-wider"
   #bg[PRELIGHT]   	= @bg_color
   #bg[ACTIVE]		= @bg_color
   	text[PRELIGHT]  = @selected_fg_color 
- 
+
+    engine "xfce"
+    {
+        smooth_edge = true
+        grip_style = none
+        boxfill
+        {
+            fill_style = gradient
+            orientation = automatic
+            shade_start = 1.25
+            shade_end = 1.00
+        }
+    }
 }
 
 
@@ -171,7 +175,18 @@ style "theme-progressbar" = "theme-wide"
 
 style "theme-scrollbar" = "theme-default"
 {
-
+    engine "xfce"
+    {
+        smooth_edge = true
+        grip_style = none
+        boxfill
+        {
+            fill_style = gradient
+            orientation = automatic
+            shade_start = 1.25
+            shade_end = 1.00
+        }
+    }
 }
 
 style "theme-combo" = "theme-button"

@@ -191,17 +191,6 @@ style "metacity-frame"
 class "MetaFrames"	style "metacity-frame"
 class "GtkWindow"	style "metacity-frame"
 
-
-style "inactivetext2"
-{
-	engine "mist"
- 	{
-		#
-	}
-}
-
-widget_class "*.<GtkMenuItem>.*" style "inactivetext2"
-
 style "panel"
 {
   	xthickness   = 2

@@ -202,11 +202,10 @@ style "panel"
 
 style "panelbuttons"
 {
-  	xthickness      = 0
-  	ythickness      = 0
+	xthickness      = 1
+	ythickness      = 1
     bg[NORMAL] 		= @bg_color
-    bg[ACTIVE]		= @bg_color 
-    bg[SELECTED]	= @selected_bg_color 
+    bg[ACTIVE]		= @base_color
     bg[PRELIGHT]	= @bg_color
     
     fg[NORMAL]		= @fg_color

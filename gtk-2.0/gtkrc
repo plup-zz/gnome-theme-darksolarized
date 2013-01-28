@@ -80,8 +80,8 @@ style "theme-entry" = "theme-wider"
 
 style "theme-button" = "theme-wider"
 {
-  	xthickness 		= 0
-  	ythickness 		= 0
+	xthickness 		= 1
+	ythickness 		= 1
   #bg[NORMAL]      = @bg_color
   #bg[INSENSITIVE] = @bg_color
   #bg[PRELIGHT]   	= @bg_color

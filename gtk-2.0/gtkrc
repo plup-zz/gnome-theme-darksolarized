@@ -1,6 +1,7 @@
-# Solarizetheme, based on Murrina333
+# Solarizetheme, based on Murrina333 and xfce-dusk
 
-gtk_color_scheme = "fg_color:#fdf6e3\nbg_color:#002b36\nbase_color:#073642\ntext_color:#fdf6e3\nselected_bg_color:#586e75\nselected_fg_color:#fdf6e3"
+gtk_color_scheme = "fg_color:#fdf6e3\nbg_color:#002b36\nbase_color:#073642\ntext_color:#fdf6e3\nselected_bg_color:#586e75\nselected_fg_color:#fdf6e3\ninfo_bg_color:#b58900\nwarning_bg_color:#cb4b16\nquestion_bg_color:#268bd2\nerror_bg_color:#dc322f\nother_bg_color:#6c71c4\n"
+
 
 gtk-button-images = 1
 gtk-icon-sizes = "panel-menu=16,16:panel=16,16:gtk-button=16,16:gtk-large-toolbar=16,16"
@@ -50,26 +51,15 @@ style "theme-default"
   text[SELECTED]   	=  darker (@selected_fg_color)
   text[INSENSITIVE]	=  @fg_color
 
-  engine "murrine" 
-  {
-	menuitemstyle	 	= 2
-	scrollbar_color	 	= "#cb4b16"
-	scrollbarstyle	 	= 0
-	contrast		 	= 1.0
-	menustyle 		 	= 0
-	glazestyle 		 	= 0
-	menubarstyle 	 	= 0
-	menubaritemstyle 	= 0
-	menuitemstyle 	 	= 0
-	listviewheaderstyle = 0
-	listviewstyle 		= 1
-	gradients			= FALSE
-	roundness 			= 0
-        animation 			= TRUE
-    hilight_ratio 		= 0.909090
-  }
+    engine "xfce"
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
 }
-
 
 style "theme-wide" = "theme-default"
 {
@@ -90,14 +80,26 @@ style "theme-entry" = "theme-wider"
 
 style "theme-button" = "theme-wider"
 {
-  	xthickness 		= 0
-  	ythickness 		= 0
+	xthickness 		= 1
+	ythickness 		= 1
   #bg[NORMAL]      = @bg_color
   #bg[INSENSITIVE] = @bg_color
   #bg[PRELIGHT]   	= @bg_color
   #bg[ACTIVE]		= @bg_color
   	text[PRELIGHT]  = @selected_fg_color 
- 
+
+    engine "xfce"
+    {
+        smooth_edge = true
+        grip_style = none
+        boxfill
+        {
+            fill_style = gradient
+            orientation = automatic
+            shade_start = 1.25
+            shade_end = 1.00
+        }
+    }
 }
 
 
@@ -173,7 +175,18 @@ style "theme-progressbar" = "theme-wide"
 
 style "theme-scrollbar" = "theme-default"
 {
-
+    engine "xfce"
+    {
+        smooth_edge = true
+        grip_style = none
+        boxfill
+        {
+            fill_style = gradient
+            orientation = automatic
+            shade_start = 1.25
+            shade_end = 1.00
+        }
+    }
 }
 
 style "theme-combo" = "theme-button"
@@ -190,17 +203,6 @@ style "metacity-frame"
 class "MetaFrames"	style "metacity-frame"
 class "GtkWindow"	style "metacity-frame"
 
-
-style "inactivetext2"
-{
-	engine "mist"
- 	{
-		#
-	}
-}
-
-widget_class "*.<GtkMenuItem>.*" style "inactivetext2"
-
 style "panel"
 {
   	xthickness   = 2
@@ -212,11 +214,10 @@ style "panel"
 
 style "panelbuttons"
 {
-  	xthickness      = 0
-  	ythickness      = 0
+	xthickness      = 1
+	ythickness      = 1
     bg[NORMAL] 		= @bg_color
-    bg[ACTIVE]		= @bg_color 
-    bg[SELECTED]	= @selected_bg_color 
+    bg[ACTIVE]		= @base_color
     bg[PRELIGHT]	= @bg_color
     
     fg[NORMAL]		= @fg_color

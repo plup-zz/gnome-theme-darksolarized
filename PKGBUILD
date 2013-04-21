@@ -13,7 +13,6 @@ md5sums=()
 
 _gitroot=git://github.com/NPerry/gnome-theme-darksolarized.git
 _gitname=gnome-theme-darksolarized
-_destdir=$pkgdir/usr/share/themes/DarkSolarized
 
 build() {
   cd "$srcdir"
@@ -30,6 +29,8 @@ build() {
 }
 
 package() {
+  _destdir=$pkgdir/usr/share/themes/DarkSolarized
+
   cd "$srcdir/$_gitname"
 
   mkdir -p $_destdir
